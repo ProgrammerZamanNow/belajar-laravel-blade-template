@@ -28,3 +28,7 @@ Route::get('/world', function () {
         "name" => "Eko"
     ]);
 });
+
+Route::get('/html-encoding', function (\Illuminate\Http\Request $request){
+    return view("html-encoding", ["name" => $request->input("name")]);
+});
